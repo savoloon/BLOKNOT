@@ -9,7 +9,7 @@ namespace bloknot1
 {
     class FileWork
     {
-        public static void CreateFile(ref TextBox notebox, ref bool tbChange, ref string docPath) // Метод "Создать новый документ"
+        public static void CreateFile(ref RichTextBox notebox, ref bool tbChange, ref string docPath) // Метод "Создать новый документ"
         {
             string newDocName = Properties.Settings.Default.newDocName;
             string programmName = Properties.Settings.Default.programmName;
@@ -19,7 +19,7 @@ namespace bloknot1
             MainForm.ActiveForm.Text = newDocName + " — " + programmName;
         }
 
-        public static void OpenFile(ref TextBox notebox, ref bool tbChange, ref string docPath) // Метод "Открыть документ"
+        public static void OpenFile(ref RichTextBox notebox, ref bool tbChange, ref string docPath) // Метод "Открыть документ"
         {
             string programmName = Properties.Settings.Default.programmName;
             OpenFileDialog openDocument = new OpenFileDialog();
@@ -37,7 +37,7 @@ namespace bloknot1
             }
         }
 
-        public static void SaveFile(ref TextBox notebox, ref bool tbChange, ref string docPath) // Метод "Сохранить документ"
+        public static void SaveFile(ref RichTextBox notebox, ref bool tbChange, ref string docPath) // Метод "Сохранить документ"
         {
             FileStream file = new FileStream(docPath, FileMode.Create, FileAccess.Write);
             StreamWriter writer = new StreamWriter(file, Encoding.Default);
@@ -46,7 +46,7 @@ namespace bloknot1
             tbChange = false;
         }
 
-        public static void SaveAsFile(ref TextBox notebox, ref bool tbChange, ref string docPath) // Метод "Сохранить документ как..."
+        public static void SaveAsFile(ref RichTextBox notebox, ref bool tbChange, ref string docPath) // Метод "Сохранить документ как..."
         {
             string programmName = Properties.Settings.Default.programmName;
             SaveFileDialog saveAsDocument = new SaveFileDialog();

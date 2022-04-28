@@ -8,12 +8,12 @@ namespace NewNoteBlock
 {
     public static class TextWork
     {
-        // Метод поиска текста в TextBox
+        // Метод поиска текста в RichTextBox
         // Для использования создаем в форме поиска глобальную переменную 
         // типа int = 0 для стартовой позиции поиска,
-        // передаем в метод ссылки на TextBox'ы с исходным и искомым текстами,
+        // передаем в метод ссылки на RichTextBox'ы с исходным и искомым текстами,
         // а также необходимо указать, учитывать ли регистр букв при поиске (True - учитывать, False - не учитывать)
-        public static int FindTextBox(ref TextBox textBox, string findText, ref int findCutLength, bool register)
+        public static int FindTextBox(ref RichTextBox textBox, string findText, ref int findCutLength, bool register)
         {
             // Поиск с учетом регистра
             if (register == true)
@@ -83,7 +83,7 @@ namespace NewNoteBlock
         }
 
         // Метод "Заменить"
-        public static int ReplaceTextBox(ref TextBox textBox, string findText, string replaceText, ref int findCutLength, bool register)
+        public static int ReplaceTextBox(ref RichTextBox textBox, string findText, string replaceText, ref int findCutLength, bool register)
         {
             if (register == true)
             {
@@ -155,7 +155,7 @@ namespace NewNoteBlock
         }
 
         // Метод "Заменить всё"
-        public static int ReplaceAllTextBox(ref TextBox textBox, string findText, string replaceText, bool register)
+        public static int ReplaceAllTextBox(ref RichTextBox textBox, string findText, string replaceText, bool register)
         {
             if (register == true)
             {
@@ -192,7 +192,7 @@ namespace NewNoteBlock
             return 0;
         }
 
-        public static void mEditEnableds(ref TextBox notebox, ref ToolStripMenuItem mEditCopy, ref ToolStripMenuItem mEditCut, ref ToolStripMenuItem mEditDel, ref ToolStripMenuItem mEditFind, ref ToolStripMenuItem mEditGo)
+        public static void mEditEnableds(ref RichTextBox notebox, ref ToolStripMenuItem mEditCopy, ref ToolStripMenuItem mEditCut, ref ToolStripMenuItem mEditDel, ref ToolStripMenuItem mEditFind, ref ToolStripMenuItem mEditGo)
         {
             if (notebox.Text.Length < 1)
             {
@@ -212,7 +212,7 @@ namespace NewNoteBlock
             }
         }
 
-        public static void StatusAnalize(ref TextBox notebox, ref ToolStripStatusLabel statusLinesCount, ref ToolStripStatusLabel statusWordsCount, ref ToolStripStatusLabel statusCharSpaceCount, ref ToolStripStatusLabel statusCharCount)
+        public static void StatusAnalize(ref RichTextBox notebox, ref ToolStripStatusLabel statusLinesCount, ref ToolStripStatusLabel statusWordsCount, ref ToolStripStatusLabel statusCharSpaceCount, ref ToolStripStatusLabel statusCharCount)
         {
             string text = notebox.Text;
             // Количество строк в тексте

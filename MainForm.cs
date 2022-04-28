@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using NewNoteBlock;
@@ -293,7 +288,7 @@ namespace bloknot1
             if (mFormatTransfer.CheckState == CheckState.Checked)
             {
                 notebox.WordWrap = true;
-                notebox.ScrollBars = ScrollBars.Vertical;
+                notebox.ScrollBars = (RichTextBoxScrollBars)ScrollBars.Vertical;
                 mEditGo.Enabled = false;
                 statusLab1.Visible = false;
                 statusLinesCount.Visible = false;
@@ -301,7 +296,7 @@ namespace bloknot1
             else
             {
                 notebox.WordWrap = false;
-                notebox.ScrollBars = ScrollBars.Both;
+                notebox.ScrollBars = (RichTextBoxScrollBars)ScrollBars.Both;
                 mEditGo.Enabled = true;
                 statusLab1.Visible = true;
                 statusLinesCount.Visible = true;

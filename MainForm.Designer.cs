@@ -64,11 +64,11 @@ namespace bloknot1
             this.statusCharSpaceCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLab4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusCharCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.notebox = new System.Windows.Forms.TextBox();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog = new System.Windows.Forms.PageSetupDialog();
             this.fontDialog = new System.Windows.Forms.FontDialog();
+            this.notebox = new System.Windows.Forms.RichTextBox();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -298,7 +298,7 @@ namespace bloknot1
             // mHeplAboutProgram
             // 
             this.mHeplAboutProgram.Name = "mHeplAboutProgram";
-            this.mHeplAboutProgram.Size = new System.Drawing.Size(180, 22);
+            this.mHeplAboutProgram.Size = new System.Drawing.Size(149, 22);
             this.mHeplAboutProgram.Text = "О программе";
             this.mHeplAboutProgram.Click += new System.EventHandler(this.mHeplAboutProgram_Click);
             // 
@@ -367,17 +367,6 @@ namespace bloknot1
             this.statusCharCount.Size = new System.Drawing.Size(13, 17);
             this.statusCharCount.Text = "0";
             // 
-            // notebox
-            // 
-            this.notebox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.notebox.Location = new System.Drawing.Point(0, 24);
-            this.notebox.Multiline = true;
-            this.notebox.Name = "notebox";
-            this.notebox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.notebox.Size = new System.Drawing.Size(800, 404);
-            this.notebox.TabIndex = 2;
-            this.notebox.TextChanged += new System.EventHandler(this.notebox_TextChanged);
-            // 
             // printDialog
             // 
             this.printDialog.Document = this.printDocument;
@@ -386,6 +375,17 @@ namespace bloknot1
             // pageSetupDialog
             // 
             this.pageSetupDialog.Document = this.printDocument;
+            // 
+            // notebox
+            // 
+            this.notebox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.notebox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notebox.Location = new System.Drawing.Point(0, 24);
+            this.notebox.Name = "notebox";
+            this.notebox.Size = new System.Drawing.Size(800, 404);
+            this.notebox.TabIndex = 2;
+            this.notebox.Text = "";
+            this.notebox.TextChanged += new System.EventHandler(this.notebox_TextChanged);
             // 
             // MainForm
             // 
@@ -446,11 +446,11 @@ namespace bloknot1
         private System.Windows.Forms.ToolStripStatusLabel statusCharSpaceCount;
         private System.Windows.Forms.ToolStripStatusLabel statusLab4;
         private System.Windows.Forms.ToolStripStatusLabel statusCharCount;
-        public System.Windows.Forms.TextBox notebox;
         private System.Drawing.Printing.PrintDocument printDocument;
         private System.Windows.Forms.PrintDialog printDialog;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog;
         private System.Windows.Forms.FontDialog fontDialog;
+        public System.Windows.Forms.RichTextBox notebox;
     }
 }
 
