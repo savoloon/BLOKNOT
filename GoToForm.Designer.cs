@@ -51,6 +51,7 @@ namespace NewNoteBlock
             this.butGo.TabIndex = 1;
             this.butGo.Text = "Перейти";
             this.butGo.UseVisualStyleBackColor = true;
+            this.butGo.Click += new System.EventHandler(this.butGo_Click);
             // 
             // butCancel
             // 
@@ -60,6 +61,7 @@ namespace NewNoteBlock
             this.butCancel.TabIndex = 2;
             this.butCancel.Text = "Отмена";
             this.butCancel.UseVisualStyleBackColor = true;
+            this.butCancel.Click += new System.EventHandler(this.butCancel_Click);
             // 
             // labGo
             // 

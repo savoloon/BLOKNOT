@@ -16,7 +16,7 @@ namespace NewNoteBlock
         {
             InitializeComponent();
         }
-
+          
         private void butGo_Click(object sender, EventArgs e) // Кнопка "Перейти к строке"
         {
             MainForm main = this.Owner as MainForm;
